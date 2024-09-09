@@ -6,7 +6,7 @@ public:
         vector<int>DippearedNumbers;
         
         for(int num : nums){
-            if(num <= n){
+            if(num <= n){//hre used to find the all the elemnt prasent or not if present return true;
                  present[num]=true;
             }
         }
