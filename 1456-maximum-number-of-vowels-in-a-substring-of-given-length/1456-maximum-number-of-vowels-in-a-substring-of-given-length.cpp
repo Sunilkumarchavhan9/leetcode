@@ -1,9 +1,9 @@
 class Solution {
 private:
     int isVowels(char c){
-      if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' ){
-          return 1;
-      }
+        if(c == 'a'|| c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+            return 1;
+        }
         return 0;
     }
 public:
@@ -15,12 +15,12 @@ public:
         for(int i=0; i<k; i++){
             curr += isVowels(s[i]);
         }
-        ans = max (ans, curr);
-        for(int i=k; i<n; i++ ){
-            curr += isVowels(s[i]);
+        ans = max(ans, curr);
+        for(int i=k; i<n; i++){
+            curr+=isVowels(s[i]);
             curr -= isVowels(s[i-k]);
-            ans = max (ans, curr);
+            ans = max(ans,curr);
         }
         return ans;
     }
-};
+};   
