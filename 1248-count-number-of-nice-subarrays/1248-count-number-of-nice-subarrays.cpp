@@ -6,21 +6,32 @@ public:
         int temp=0, ans=0;
         
         for(int i=0; i<n; i++){
-            if(nums[i]%2 == 0) temp++;
+            if(nums[i] %2 == 0) temp++;
             else{
                 even.push_back(temp);
                 temp=0;
             }
-        }    
+        }    // if there 121 u got even num then u increment that u need to update                                  thise sec even.push get work done for update 
         even.push_back(temp);
-        int m=even.size();
-        for(int i=0; i < m-k; i++){
-           ans += (even[i]+1)*(even[i+k]+1);
+        int m=even.size();  
+        for(int i=0; i<m-k; i++){
+            ans+= (even[i]+1 )* (even[i+k]+1);            
         }
         return ans;
         
     }
 };
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Consider the window with k prime numbers, the number of evens on either side
