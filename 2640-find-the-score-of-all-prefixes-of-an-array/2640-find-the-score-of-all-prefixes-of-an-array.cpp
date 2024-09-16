@@ -5,12 +5,12 @@ public:
         vector<long long >ans;
         long long mx=0;
         
-        for(int i=0; i<n; i++){
-            mx = max(mx,nums[i]+0LL);
+        for(int i=0;  i<n; i++){
+            mx = max(mx, nums[i]+0LL);
             ans.push_back(mx+nums[i]);
         }
         for(int i=1; i<n; i++){
-            ans[i] += ans[i-1];
+            ans[i] +=ans[i-1];
         }
         return ans;
     }
