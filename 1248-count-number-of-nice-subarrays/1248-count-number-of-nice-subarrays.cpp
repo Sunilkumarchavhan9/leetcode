@@ -6,8 +6,10 @@ public:
         int temp=0, ans=0;
         
         for(int i=0; i<n; i++){
+            //checking here how many even comes
             if(nums[i]%2==0) temp++;
             else{
+                //if after even one or more odd come i am pushing or stroing my even value make  0
                 even.push_back(temp);
                 temp=0;
             }
@@ -15,6 +17,9 @@ public:
         even.push_back(temp);
         int m=even.size();
         for(int i=0; i<m-k; i++){
+         //sliding window cal culation 11211
+            // 1121
+            // 1211
             ans+=(even[i]+1)*(even[i+k]+1);
         }
         return ans;
