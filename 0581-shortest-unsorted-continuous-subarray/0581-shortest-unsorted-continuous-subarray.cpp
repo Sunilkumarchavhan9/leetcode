@@ -1,17 +1,17 @@
 class Solution {
 public:
     int findUnsortedSubarray(vector<int>& nums) {
-        int n=nums.size();
-        vector<int>copy_nums=nums;
-        sort(copy_nums.begin(), copy_nums.end());
+       int n=nums.size();
+        vector<int>nums_copy = nums;
+        sort(nums_copy.begin(), nums_copy.end());
         int s=-1, e=-1;
         for(int i=0; i<n; i++){
-            if(nums[i] != copy_nums[i]){
+            if(nums_copy[i] != nums[i]){
                 if(s == -1){
-                    s =i;
-                    e=i;
+                    s= i;
+                    e= i;
                 }else{
-                    e =i;
+                    e= i;
                 }
             }
         }
