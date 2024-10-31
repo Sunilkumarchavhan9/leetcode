@@ -17,7 +17,7 @@ public:
             if(nums[mid] < target && target <= nums[e]){
               s = mid + 1;
               }else{
-                e= mid - 1;
+                e = mid - 1;
               }
           }  
       }
